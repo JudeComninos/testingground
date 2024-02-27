@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create</title>
+    <link rel="stylesheet" href="css/mainStyle.css"/>
+    </head>
+    <header> <img src="goodkarmasignblack.png">
+
+    <div id="nav-container">
+        <a href="explore.html"> <h2 class="nav-item" id="explore"> explore </h2> </a>
+
+        <a href="index.html"> <h2 class="nav-item" id="create"> create </h2> </a>
+        
+        <a href="store.html"> <h2 class="nav-item" id="shop"> shop </h2> </a>
+    </div>
+</header>
+    <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <div id="product-container">
+            <div id="product">
+                
+                <a href="shorts.html" class="gif-link"><img class="gif" src="gifs\shortsAlpha.gif"></a>
+                
+            </div>
+            <div id="product">
+                <a href="sweater.html" class="gif-link"><img class="gif" src="gifs\sweateAlphar.gif"></a>
+                
+            </div>
+            <div id="product">
+                <a href="franklees.html" class="gif-link"><img class="gif" src="gifs\frankleesAlpha.gif"></a>
+                
+            </div>
+            <div id="product">
+                <a href="hoodie.html" class="gif-link"><img class="gif" src="gifs\hoodie.gif"></a>
+                
+            </div>
+        </div>
+        <script>
+
+            $(document).ready(function(){
+                $(".gif").click(function(event){
+                    event.preventDefault();
+                    $("body").css("animation", "fadeOutAnimation 1s forwards");
+                    console.log("it works!");
+                    var href = $(this).parent().attr('href');
+                    setTimeout(function() {window.location = href}, 1000);
+                });
+            });
+            
+            window.onload = function() {
+    // Get the current page name (e.g., "index", "shop", "explore")
+    var pageName = window.location.pathname.split("/").pop().split(".")[0];
+
+    // If we're on the index page, treat it as the "create" page
+    if (pageName === "index") {
+        pageName = "create";
+    }
+
+    // Add the "active" class to the appropriate nav item
+    document.getElementById(pageName).classList.add("active");
+}
+
+            
+            </script>
+    </body>
+
+
+
+</html>

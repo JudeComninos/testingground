@@ -1,0 +1,106 @@
+h1 {
+  font-size: 3em;
+}
+
+header {
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100vw;
+height: auto;
+padding-top: 1em;
+}
+header img {
+  align-items: center;
+  width: 100px;
+  height: auto;
+}
+
+body { 
+  margin: 0;
+  background: linear-gradient(#e0e0e0, #b7b7b7);
+  text-align:center;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+@keyframes fadeOutAnimation {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}        
+.gif {
+  padding-top: 3vh;
+  width: 25vw;
+  height: auto;
+  position: relative;
+  display: flex;
+}
+
+#product {
+  display: flex;
+  align-items: center;
+}
+
+#product-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#nav-container {
+display: flex;
+justify-content: center;
+gap: 1vw;
+margin-top: 0.3vh;
+}
+a {
+  text-decoration: none; /* Removes underline */
+  
+}
+
+h2 {
+  font-size: large;
+  font-family: Helvetica, sans-serif;
+  
+
+}
+
+/* Default style for nav items */
+.nav-item {
+  color: black;
+  font-weight: normal;
+}
+
+/* Style for the active nav item */
+.nav-item.active {
+  color: rgb(0, 0, 0);
+  font-weight: bold; /* Makes them bold when selected */
+}
+
+@media screen and (orientation:portrait) {
+  .gif {
+      width: 80vw;
+      min-height: 80vw; 
+      display: block;
+  }
+
+  #product-container {
+      padding-top: 0.5vh;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  #nav-container {
+      gap: 5vw;
+  }
+}

@@ -1,0 +1,72 @@
+<!-- Store Page -->
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="css/mainStyle.css"/>
+    <style>
+        /* This will apply to all unvisited links */
+a:link {
+    color: inherit;  /* this will make the link color the same as the text color */
+}
+
+/* This will apply to all visited links */
+a:visited {
+    color: inherit;  /* this will make the link color the same as the text color */
+}
+        body {
+        width: 100vw;
+        height: 100%;
+        margin: 0;
+        font-family: "Monserrat", sans-serif;
+        background: linear-gradient(#e0e0e0, #b7b7b7);
+        overflow-x: hidden;
+        }
+        #clickable {
+            display:flex;
+            width: 25vw;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(#e0e0e0, #b7b7b7 );
+            left: 0;
+            right: 0;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        #productList {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2vw;
+        }
+        img {
+            width: 18vw;
+        }
+
+    </style>
+<head>
+    <title>Store Page</title>
+</head>
+<header> <img src="goodkarmasignblack.png">
+
+    <div id="nav-container">
+        <a href="explore.html"> <h2 class="nav-item" id="explore"> explore </h2> </a>
+
+        <a href="index.html"> <h2 class="nav-item" id="create"> create </h2> </a>
+        
+        <a href="shop.html"> <h2 class="nav-item" id="shop"> shop </h2> </a>
+    </div>
+</header>
+<body>
+    <div id="productList">
+        <!-- Product details will be inserted here -->
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/store.js"></script>
+</body>
+</html>

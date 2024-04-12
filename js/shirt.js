@@ -24,7 +24,7 @@ defaultTexture.wrapS = THREE.RepeatWrapping;
 defaultTexture.wrapT = THREE.RepeatWrapping;
 defaultTexture.needsUpdate = true;
 
-// Handle mouse interactions (e.g., dragging)
+// Handle mouse interactions
 let isDragging = false;
 let previousMousePosition = { x: 0, y: 0 };
 
@@ -63,7 +63,7 @@ function loadTextureAndModel() {
   // Use the uploaded texture if it exists, otherwise use the default texture
   const textureToUse = uploadedTexture || defaultTexture;
 
-  // Load the 3D model (replace 'shirt.gltf' with your actual model file)
+  // Load the 3D model 
   loader.load(
     `models/${objToRender}/shirt.gltf`,
     function (gltf) {
@@ -91,7 +91,7 @@ function loadTextureAndModel() {
   );
 }
 
-// Initialize renderer, lights, camera, etc. (as in your original code)
+// Initialize renderer, lights, camera
 
 const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true }); 
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -136,9 +136,3 @@ window.addEventListener("resize", function () {
 
 // Start the 3D rendering
 animate();
-
-// Slider input handling (as in your original code)
-
-// Toggle animation button handling (as in your original code)
-
-// Container click handling (as in your original code)
